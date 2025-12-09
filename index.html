@@ -10,12 +10,17 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>Brain</text></svg>">
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
-        /* Dark Theme + Your Colors */
         body { background: #000 !important; color: #f9dbd8 !important; }
         h1, h2, p, span, li { color: #f9dbd8 !important; }
         a { color: #008080 !important; }
         a:hover { color: #f9dbd8 !important; }
-        .cta { background: #008080 !important; color: #000 !important; font-weight: bold; }
+        .cta { 
+            background: #008080 !important; 
+            color: #000 !important; 
+            font-weight: bold; 
+            position: relative; 
+            z-index: 2;
+        }
         .btn-background { background: #008080 !important; }
         .share-btn { background: #111 !important; border: 1px solid #008080 !important; }
         .share-btn:hover { background: #008080 !important; color: #000 !important; }
@@ -29,6 +34,9 @@
             border-radius: 8px; 
         }
         .section { background: #000; }
+        /* Fix the random line under resume button */
+        .intro--banner::after, .intro--banner::before { display: none !important; }
+        .intro--banner { overflow: hidden; }
     </style>
 </head>
 <body>
@@ -53,7 +61,6 @@
                             <li><span>About</span></li>
                             <li><span>Projects</span></li>
                             <li><span>Skills</span></li>
-                            <li><span>Contact</span></li>
                         </ul>
                     </nav>
 
@@ -81,7 +88,7 @@
                                         <span class="share-btn-icon"></span>
                                         <span class="share-btn-text">GitHub</span>
                                     </a>
-                                    <a class="share-btn share-btn-branded share-btn-email" href="mailto:pranayrajesh625@gmail.com" target="_blank">
+                                    <a class="share-btn share-btn-branded share-btn-email" href="mailto:pranayrajesh625@gmail.com">
                                         <span class="share-btn-icon"></span>
                                         <span class="share-btn-text">Email</span>
                                     </a>
@@ -97,7 +104,7 @@
                                     <p>Computer Science student at VIT with a strong passion for Machine Learning, Deep Learning, and full-stack development.</p>
                                     <p>Self-taught developer constantly learning and building real-world AI solutions. Currently diving deep into LLMs, computer vision, and production-ready ML systems.</p>
                                     <br>
-                                    <a href="mailto:pranayrajesh625@gmail.com">Let's build something amazing together →</a>
+                                    <a href="mailto:pranayrajesh625@gmail.com">Let's build something amazing together</a>
                                 </div>
                             </div>
                         </li>
@@ -146,12 +153,12 @@
             </div>
         </div>
 
+        <!-- Updated navigation (Contact removed) -->
         <ul class="outer-nav">
             <li class="is-active">Home</li>
             <li>About</li>
             <li>Projects</li>
             <li>Skills</li>
-            <li>Contact</li>
         </ul>
     </div>
 
